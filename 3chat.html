@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main{
+            display: grid;
+            height: 100px;
+            grid-template-columns: 200px 700px 100px;
+            grid-template-rows: 100px 400px 100px ;
+            grid-template-areas: 
+            "article article article article"
+            "article article article article"
+            "footer footer footer footer"    
+        }
+
+        h5{
+            border-style: solid;
+            padding: 12px;
+            
+            background-color: rgba(28, 240, 176, 0.295);
+        }
+
+        img{
+            float: left;
+        }
+
+        #article{
+            background: rgb(15, 231, 123);
+            grid-area: article; 
+            border-style: solid;
+            padding: 20px;    
+        }
+
+        footer{
+            background: rgb(20, 175, 46);
+            grid-area: footer;  
+            padding-top: 50px; 
+            padding-left: 30px;
+            border-style: solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">  
+        <article id="article">
+            <div id="container">
+                <div class="sasa">
+                <h5>PESAN</h5>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <input type="text" style="width: 90%; " placeholder="kirim pesan..."> <button onclick="kirim()">kirim</button>
+        </footer>
+    </div> 
+
+    <script>
+        function kirim(){
+        let elemen, satu,teks, parent
+        // buat node
+        elemen = document.createElement("p")
+        teks = document.createTextNode("-selamat pagi...")
+         // menambah child ke parentnya --> elemen
+        elemen.appendChild(teks)
+         // seleksi parent untuk ditambah
+        parent = document.getElementById("container")
+         // menambah child di parent
+        parent.appendChild(elemen)
+        }
+    </script>
+</body>
+</html>
+

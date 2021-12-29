@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+label{
+    font-size: 20px;
+    color: yellow;
+    font-weight: 400;
+    font-family: cursive;
+}
+body{
+    background-color: tomato;
+}

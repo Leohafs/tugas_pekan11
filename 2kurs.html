@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tugas 1 kurs</title>
+    <style>
+body{
+    background-color: rgb(15, 231, 123);
+}
+input{
+    width: 90%;
+}        
+fieldset{
+    margin: 15% 35%;
+    width: 250px;
+}
+.abe{
+    border-style: ridge;
+    margin: 10px; 
+    background-color: rgba(255, 255, 255, 0.479);   
+}
+nav {
+  float: left;
+  width: 100%;
+  height: 170px; /* only for demonstration, should be removed */
+  background: rgba(109, 145, 167, 0.452);
+  border-style: solid;
+}
+    </style>
+</head>
+<body>
+    <fieldset style="background-color: rgb(114, 132, 177);">
+        <legend><b>kurs rupiah-mata uang asing</b></legend>
+    <nav>
+    <div class="abe">Masukan Nilai <br>
+     <input type="number" id="input" value="0">
+    </div>
+    <div class="abe">Valas <br>
+      <select name="" id="pilihan" >
+        <option value="">pilih..</option>
+        <option value="satu">dolar US</option>
+        <option value="dua">Dolar singapore</option>
+        <option value="tiga">ringgit malaysia</option>
+        <option value="empat">yen jepan</option>
+        <option value="lima">euro</option>
+        <option value="enam">riyal arab saudi</option>
+      </select>
+
+      <button onclick="kali()">hitung</button>
+
+    </div>
+    <div class="abe">Nilai Rupiah <br>
+        <span  id="nilai"></span>
+       
+    </div>
+    
+    </nav>
+
+    <script>
+        function kali(){
+            let input, pilih
+            input = document.getElementById("input").value
+            pilih = document.getElementById("pilihan").value
+
+            if(pilih == "satu"){
+                hasil = input * 9.915 
+            }else if(pilih == "dua"){
+                hasil = input * 13.472
+            }else if(pilih == "tiga"){
+                hasil = input * 874
+            }else if(pilih == "empat"){
+                hasil = input * 120
+            }else if(pilih == "lima"){
+                hasil = input * 15.888
+            }else if(pilih == "enam"){
+                hasil = input * 3.592
+            }else{
+                hasil ="tidak ada yang dipilih"
+            }
+            let _hasil = document.getElementById('nilai')
+            _hasil.innerHTML = "Rp."+ hasil;
+            
+        }
+        
+    </script>
+    </fieldset>
+</body>
+</html>

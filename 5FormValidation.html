@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Belajar Form Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        form{
+            border-style: solid;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: khaki;
+        }
+        body{
+            background-color: lightcoral;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+
+        input:invalid:required {
+            background-image: linear-gradient(to right, pink, lightgreen);
+        }
+
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form name="formPendaftaran" action="5outputvalidation.php" method="POST" >
+            <div class="form-group">
+                <label>Nama Pelanggan</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" class="form-control" required minlength="" maxlength="30">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Email Aktif" class="form-control" required >
+                <small id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+            </div>
+
+            <div class="form-group">
+                <label>Jam Keberangkatan</label>
+                <input type="time" name="jam" placeholder="jam Keberangkatan" class="form-control" required minlength="00.00" maxlength="23.59" >
+            </div>
+
+            <div class="form-group">
+                <label>tujuan Keberangkatan</label>
+                <input type="text" name="tujuan" placeholder="tujuan anda" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Jumlah tiket</label>
+                <select name="jumlah tiket" class="form-control" required>
+                        <option value="0">jumlah tiket...</option>
+                        <option value="1">1 tiket</option>
+                        <option value="2">2 tiket</option>
+                        <option value="3">3 tiket</option>
+                        <option value="4">4 tiket</option>
+                        <option value="5">5 tiket</option>
+                        <option value="6">6 tiket</option>
+                        <option value="7">7 tiket</option>
+                        <option value="8">8 tiket</option>
+                        <option value="9">9 tiket</option>
+                        <option value="10">10 tiket</option>
+                    </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

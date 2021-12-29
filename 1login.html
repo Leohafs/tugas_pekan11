@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login</title>
+    <style>
+        div{
+            border-style: solid;
+            margin: 20%;
+            padding: 20px ;
+            background-color: rgba(25, 240, 72, 0.767);
+        }
+        body{
+            background-color: rgb(15, 231, 123);
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Login</h2>
+    <form onsubmit="kirim()" id="form">
+    <input type="text" id="username" placeholder="nama,email,no">
+    <input type="password" id="password" placeholder="password anda">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    
+
+    <script>
+        function kirim(){
+            let input = document.getElementById("username").value
+            let password = document.getElementById("password").value
+            let form = document.getElementById("form")
+            if(input == 'ahmad2017' && password == 'integrity'){
+                form.setAttribute("action","1loginsukses.html")
+                window.alert("Login berhasil")
+            }else{
+                window.alert("login gagal")
+            }
+        }
+    </script>
+    
+</body>
+</html>
